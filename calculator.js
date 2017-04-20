@@ -2,7 +2,7 @@
   Create a function that multiplies two numbers
   passed in as arguments. Return the product.
  */
-var multply = document.getElementById("multiply").addEventListener("click", function multiplication(event){
+var multiply = document.getElementById("multiply").addEventListener("click", function multiplication(event){
   return(value1 * value2);
 });
 /*
@@ -41,23 +41,24 @@ var divide = document.getElementById("divide").addEventListener("click", functio
 
 var value1 = document.getElementById("number1").input;
 var value2 = document.getElementById("number2").input;
-
-var mathed = function mathItUp(math){
-  if(addition){
-    return addition
-  } else if(multiply){
-      return(multiply){
-    if(subtract){
-      return(subtract);
-    if(divide){
-      return(divide);
-  }
-};
-
 var output = document.getElementById("output");
+var doMath = document.getElementById("submit").addEventListener("click", function(mathStuff){
+  if(multiply){
+    return multiply;
+  } else if(addition){
+      return addition};
+    if(subtract){
+      return subtract};
+    if(divide){
+      return(divde)};
+});
 
-console.log("The Answer is ", mathed.value);
-output.innerHTML = "The Answer is ", + mathed.value;
+
+console.log("Number 1", value1);
+console.log("Number 2", value2);
+
+// console.log("The Answer is ", product.value);
+// output.innerHTML = "The Answer is ", + product.value;
 
 
 
