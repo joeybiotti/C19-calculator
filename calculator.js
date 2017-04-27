@@ -11,9 +11,11 @@ var num2 = document.getElementById("number2").value;
   Create a function that multiplies two numbers
   passed in as arguments. Return the product.
  */
+
 multiply = function(mult){
   return num1 * num2;
 };
+
 
 /*
   Create a function that adds two numbers
@@ -50,6 +52,7 @@ divide = function(div){
   Return the value of the operation.
  */
 
+
 var addBtn = document.getElementById("add").addEventListener("click", addition);
 var subBtn = document.getElementById("subtract").addEventListener("click", subtract);
 var multBtn = document.getElementById("multiply").addEventListener("click", multiply);
@@ -68,6 +71,7 @@ output = function(math){
     return div;
   }
 }
+
 
 
 
