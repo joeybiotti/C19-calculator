@@ -1,10 +1,8 @@
-"use-strict"
-
-console.log("calculator.js");
-console.log("output", output);
-
-var num1 = document.getElementById("number1").value;
-var num2 = document.getElementById("number2").value;
+const addBtn = document.getElementById("add");
+const subBtn = document.getElementById("subtract");
+const multBtn = document.getElementById("multiply");
+const divBtn = document.getElementById("divide");
+const outputArea = document.getElementById("output");
 
 
 /*
@@ -12,40 +10,52 @@ var num2 = document.getElementById("number2").value;
   passed in as arguments. Return the product.
  */
 
-multiply = function(mult){
-  return num1 * num2;
-};
-
+multBtn.addEventListener("click", () => {
+  const num1 = document.getElementById("value1");
+  const num2 = document.getElementById("value2");
+  result = multiply(num1.value, num2.value);
+  outputArea.innerHTML = result;
+});
 
 /*
   Create a function that adds two numbers
   passed in as arguments. Return the sum.
  */
 
-addition = function(add){
-  return num1 + num2;
-};
+addBtn.addEventListener("click", () =>{
+  const num1 = document.getElementById("value1");
+  const num2 = document.getElementById("value2");
+  result = add(num1.value, num2.value);
+  outputArea.innerHTML = result;
+})
 
 /*
   Create a function that subtracts two numbers
   passed in as arguments. Return the difference.
  */
-subtract = function(sub){
-  return num1 - num2;
-}
+
+subBtn.addEventListener("click", ()=>{
+  const num1 = document.getElementById("value1");
+  const num2 = document.getElementById("value2");
+  result = subtract(num1.value, num2.value);
+  outputArea.innerHTML = result;
+})
 
 /*
   Create a function that divides two numbers
   passed in as arguments. Return the quotient.
  */
 
-divide = function(div){
-  return num1 / num2;
-};
+divBtn.addEventListener("click", ()=>{
+  const num1 = document.getElementById("value1");
+  const num2 = document.getElementById("value2");
+  result = divide(num1.value, num2.value);
+  outputArea.innerHTML = result;
+})
 
-
-/* Create a function that accepts three arguments.
-1. First number
+/*
+  Create a function that accepts three arguments.
+    1. First number
     2. Second number
     3. A function that performs an operation on them
 
@@ -53,46 +63,24 @@ divide = function(div){
  */
 
 
-var addBtn = document.getElementById("add").addEventListener("click", addition);
-var subBtn = document.getElementById("subtract").addEventListener("click", subtract);
-var multBtn = document.getElementById("multiply").addEventListener("click", multiply);
-var divBtn = document.getElementById("divide").addEventListener("click", divide);
-var equalsBtn = document.getElementById("equals").addEventListener('click', equals);
-var outputArea = document.getElementById("output");
+function add(x,y){
+  const addAnswer = value1(x) + value2(y);
+  return addAnswer;
+};
 
-output = function(math){
-  if(addition){
-    return add;
-  }else if(subtract){
-    return sub;
-  }else if(multiply){
-    return mult;
-  }else if(divide){
-    return div;
-  }
-}
+function multiply(x,y){
+  const multAnswer = Number(x) * Number(y);
+  return multAnswer;
+};
 
+function subtract(x,y){
+  const subAnswer = Number(x) - Number(y);
+  return subAnswer;
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function divide(x,y){
+  const divAnswer = Number(x) / Number(y);
+  return divAnswer;
+};
 
 
